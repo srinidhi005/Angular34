@@ -17,13 +17,13 @@ import * as draggablePoints from 'highcharts-draggable-points/draggable-points.j
 
  export class UserComponent implements OnInit {
    
-    @ViewChild("revenuegrowth",{ read: ElementRef,static:true }) container: ElementRef;
-    @ViewChild("cogs", { read: ElementRef,static:true }) containe: ElementRef;
+     @ViewChild("revenuegrowth",{ read: ElementRef,static:true }) container: ElementRef;
+     @ViewChild("cogs", { read: ElementRef,static:true }) containe: ElementRef;
      @ViewChild("SG&A", { read: ElementRef,static:true }) contain: ElementRef;
      @ViewChild("D&A", { read: ElementRef,static:true }) contai: ElementRef;
-    @ViewChild("otheincome", { read: ElementRef,static:true }) conta: ElementRef;
+     @ViewChild("otheincome", { read: ElementRef,static:true }) conta: ElementRef;
      @ViewChild("netie", { read: ElementRef,static:true }) cont: ElementRef;
-    @ViewChild("projectionOne", { read: ElementRef,static:true }) con: ElementRef;
+     @ViewChild("projectionOne", { read: ElementRef,static:true }) con: ElementRef;
      @ViewChild("projectionTwo", { read: ElementRef,static:true }) co: ElementRef;
      @ViewChild("projectionThree", { read: ElementRef,static:true }) cnn: ElementRef;
      @ViewChild("projectionFour", { read: ElementRef,static:true }) cer: ElementRef;
@@ -34,6 +34,7 @@ import * as draggablePoints from 'highcharts-draggable-points/draggable-points.j
     }
     
     ngOnInit() {
+	$("#addNewScenario").hide();
 	$(".cover-spin").show();
         draggablePoints(Highcharts1);
 	var yearsArray = [];
@@ -52,8 +53,10 @@ try {
 	var queryString = window.location.href.split("?")[1];
 	 companyName = (queryString.split("&")[0]).split("=")[1];
 	 scenarioNumber = (queryString.split("&")[1]).split("=")[1];
+	 $("#sel2").val(scenarioNumber);
 	 if(companyName.endsWith("##")){
-	  	window.location.href=(((decodeURI(window.location.href)).split("=")[0])+"="+(companyName.substring(0,companyName.length-2))+"&scenario="+scenarioNumber);
+	 window.location.href=(((decodeURI(window.location.href)).split("=")[0])+"="+(companyName.substring(0,companyName.length-2))+"&scenario="+scenarioNumber);
+
 			window.location.reload();
 			  }else{
 			  $(".cover-spin").hide();
@@ -64,8 +67,9 @@ try {
 }
   scenarioCount = 0;
 //   $("#navcompany").show();
-// $("#navcompany").text("  :companyName: " + companyName + "   :Scenario"+scenarioNumber);
+// $("#navcompany").text("  :companyName: " + companyName + ");
 $("#excelId").attr("href","/pdf?companyName="+companyName);
+$("#dashBoardId").attr("href","#/dashboard?companyName="+companyName);
 $("#actualsId").attr("href","/actual?CompanyName="+companyName);
 $("#financialId").attr("href","/FinancialModel?CompanyName="+companyName);
 $("#metricsbtn").attr("href","#/pdf?CompanyName="+companyName+"##");
@@ -111,8 +115,6 @@ let actualsInput = {
 			}
 		updateProjection(actualObj);			 
 	});
-
-
 	}
 
 
@@ -1312,7 +1314,44 @@ function loadData(){
                      console.log(" scenarioNumber from save function,",scenarioNumber);
                     // scenarioNumber=(parseInt(scenarioNumber)+1).toString();
                 });
-    });
+		});
+
+		let scenarioInput = {
+		"async": true,
+		"crossDomain": true,
+		"url": "http://34.67.197.111:8000/scenarios?company="+companyName,
+		"method": "GET",
+			"headers": {
+					"authorization": "Basic cm1pX3VzZXI6cm1pMzIxIUAj",
+				 	"content-type": "application/json",
+					"cache-control": "no-cache",
+					     	"postman-token": "648dcbfa-30ef-3359-f29a-31b2038f29ac"
+											        },
+												        "processData": false,
+													}
+
+
+		$('.cover-spin').show();
+		        $.ajax(scenarioInput).done(function (response){
+			        $('.cover-spin').hide();
+				          let str="";
+					            let presentScenarios = [];
+						              presentScenarios = (JSON.parse(response)).scenarios;
+		 str = "<option _ngcontent-sut-c5='' value='"+0+"' ng-reflect-value='"+0+"'> Default </option>";
+		 for(var i=1;i<presentScenarios.length;i++){
+		  str=str+"<option _ngcontent-sut-c5='' value='"+presentScenarios[i]+"' ng-reflect-value='"+presentScenarios[i]+"'>		 Scenario "+presentScenarios[i]+" </option>";
+													              }
+														                   		 $("#sel2").html(str);
+																                  });
+
+																		                $( "#sel2" ).change(function() {
+																				                
+																				                let scerno=$("#sel2").val();
+																				 window.location.href="/#/FinancialModel?companyname="+companyName+"&scenario="+scerno;
+																								                        window.location.reload();
+																											            });
+
+
     }
   
 

@@ -46,10 +46,10 @@ var db = require('./models');
 // that the password is correct and then invoke `cb` with a user object, which
 // will be set at `req.user` in route handlers after authentication.
 passport.use(new Strategy(
-    function(username, password, cb) {
+    function(email, password, cb) {
         db.users.findOne({
           where: {
-            username: username
+            email: email
           },
           raw: true
         }).then(user => {
@@ -90,9 +90,9 @@ var app = express();
 const port=process.env.PORT || 3010;
 // view engine setup
  app.set('view engine', 'jade');
-
+ app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/dist/'));
-
+app.use(express.static(__dirname + '/views/'));
 app.use(logger('dev'));
 // app.use('/public' ,express.static('public'))
 app.use(express.static(path.join(__dirname, 'public')));
@@ -126,7 +126,7 @@ app.use('/', indexRouter(passport));
 app.post('/upload', upload.single('file'), function (req, res, next) {
   var {company, period} = req.body;
   var filename = req.file.filename;
-  filename = filename.replace(/ /g, '');
+  filename = filename.replace(/&/g,'');
   var filepath = 'uploads/'+filename
   fs.renameSync(req.file.path, filepath);
   req.file = Object.assign({}, req.file, {filename: filename, path: filepath})
@@ -208,21 +208,21 @@ app.post('/doc', function (req, res, next) {
             job.save(function(err, data, data1) {
               if (err) {
                 console.log(err);
-                res.status(500).send({status: "Internal Server Error"});
+                res.status(500).send({status: "Internal Server Error Level0"});
               } else {
                 res.status(200).send({status: "FILE UPLOADED SUCCESSLY"});
               }
             })
           }).catch(err => {
             console.log(err);
-            res.status(500).send({status: "Internal Server Error"});
+            res.status(500).send({status: "Internal Server Error Level1"});
           })
         })
       });
     }).on('error', function(err) {
       console.log(err);
       fs.unlinkSync(filename);
-      res.status(500).send({status: "Internal Server Error"});
+      res.status(500).send({status: "Internal Server Error Level2"});
     })
   } else {
     res.status(400).send({errMsg: "Data is missing"});
