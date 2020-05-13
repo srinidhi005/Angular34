@@ -19,62 +19,74 @@ import datetime
 
 API_KEY = '6yc5mavlgq4v'
 
-units_pattern = config.units_pattern
-company_names_pattern = config.company_names_pattern
-statements = config.statements
-sga_patterns = config.sga_patterns
-cost_of_goods_sold = config.cost_of_goods_sold
-total_revenue_patterns = config.total_revenue_patterns
-product_dev = config.product_dev
-sales_and_marketing = config.sales_and_marketing
-total_operating_exp = config.total_operating_exp
-net_interest_exp = config.net_interest_exp
-other_income_exp = config.other_income_exp
-tax_patterns = config.tax_patterns
-statements_cash_flow = config.statements_cash_flow
-depriciation_amort = config.depriciation_amort
-gross_profit=config.gross_profit
-ebt_patterns=config.ebt_patterns
-ebit_patterns=config.ebit_patterns
-net_income=config.net_income
-r_and_d_pattern=config.r_and_d_pattern
-in_process_pattern=config.in_process_pattern
-# units_pattern = ["thousands","millions"] #acceptable units
-# company_names_pattern = [".*Inc\.",".*CORPORATION",".*International",".*Subsidiaries",".*Incorporation"] #acceptable company names
+gross_profit=["Gross profit","Gross margin","Gross Profit","Gross Margin"]
+r_and_d_pattern=["Research and development expense"]
+in_process_pattern=["In-process research and development"]
 
-### statements to consider
-##statements = [
-##".*Consolidated.*Statement.*Operations.*",
-##".*Consolidated.*Statement.*Income.*",
-##".*Consolidated.*Statement.*Earnings.*",
-##]
-##
-##total_revenue = ["Total Net Revenue","Total Revenue","Total Revenues","Net Sale","Net Sales",
-##                 "Revenue","Revenue","Net Revenue","Net Revenues","Sales to customer"]
-##
-##sga_patterns = ["General.*administrative.*","Selling.*informational.*administrative.*","Selling.*general.*administrative",
-##                "Total.*selling.*administrative.*","Marketing.*administration.*research.*","Selling.*marketing.*and.*administrative.*expenses"]
-##
-##cost_of_goods_sold = ["Total costs and expenses","Total cost of revenues","Cost of Sale.*","COGs","Cost of goods sold","Cost of Revenue.?","Cost of products sold"]
-##
-##net_interest_exp = ["Interest expense.*income.*net.*","Interest income.*expense.*net.*","Interest, net","Interest expense.*net",
-##                    "Interest expense","Interest and debt expense","Net interest expense"]
-##other_income_exp = ["Other expenses","Other expense.*income.*net","Other expense.*net","Interest.*other.*income.*expense.*net","Other.*income/(loss).*net","Net.*other.*(income).*/.*expense","Other.*(income).*expense.*net","Other.*(income).*expense"]
-##
-##tax_patterns = [r"Income tax benefit \(provision\)","Income tax expense","Income tax expense (benefit)","Income tax provision","Provision/(benefit) for taxes on income","Provision for income taxes","Income taxes","Provision.*for.*taxes.*on.*income.*"]
-##
-##
-##
-##depriciation_amort=["Depreciation",
-##"Amortization",
-##"Depreciation and amortization",
-##"Depreciation expense",
-##"Depreciation and amortization of property, equipment and intangibles"
-##"Depreciation, amortization, and other"
-##"Depreciation and amortization expense"
-##]
-##
-##statements_cash_flow=[".*Consolidated Statements of Cash Flows"]
+
+units_pattern = ["thousands","millions"] #acceptable units
+company_names_pattern = [".*Inc\.",".*CORPORATION",".*International",".*Subsidiaries",".*Incorporation",".*Company"]
+
+
+statements = [
+        ".*Consolidated.*Statement.*Operations.*",
+        ".*Consolidated.*Statement.*Income.*",
+        ".*Consolidated.*Statement.*Earnings.*",
+        ]
+ebt_patterns=["Earnings before income taxes and after-tax earnings from joint ventures","Net earnings before income tax \(benefit\) expense","INCOME BEFORE INCOME TAXES","INCOME FROM CONTINUING OPERATIONS BEFORE INCOME TAXES","Income before provision for income taxes","Earnings before provision for taxes on income","Income before income taxes","Income Before Income Taxes","Income\/\(loss\).*before.*income.*taxes","Income before income tax expense","Income before income tax expense","Earnings from continuing operations before income taxes","Income \(loss\) before income taxes", "Loss from continuing operations before income taxes","Income from continuing operations before income taxes","EARNINGS FROM CONTINUING OPERATIONS BEFORE INCOME TAXES","Loss before income taxes","Income \(loss\) before income taxes.*","Loss before tax","Income Before \(Provision\) Benefit For Income Taxes","Net income \(loss\) before income taxes","Income before benefit for income taxes"]
+
+
+#net_income=["NET INCOME FROM CONTINUING OPERATIONS","NET INCOME",r"(?:Net earnings attributable to The Kroger Co\.$){1}",r"(?:Net earnings$){1}","Net income \(loss\)","Net income","Net income\/\(loss\)","Net loss","Loss from continuing operations\, net of taxes"]
+
+
+#net_income=["NET INCOME FROM CONTINUING OPERATIONS","NET INCOME ATTRIBUTABLE TO COSTCO","NET INCOME",r"(?:Net earnings attributable.*){1}","Consolidated net income attributable to Walmart",r"(?:Net earnings$){1}","Net income \(loss\)","Net income","Net income\/\(loss\)",r"(?:Net loss$){1}","Net earnings \/ \(loss\)"]
+
+
+net_income=["Net income including noncontrolling interest","Net earnings attributable to General Mills","Consolidated net income attributable to Walmart" ,"NET INCOME ATTRIBUTABLE TO COSTCO","CONSOLIDATED NET INCOME.*","Net earnings attributable.*","Net Income",r"(?:Net earnings$){1}",r"(?:Net earnings attributable to The Kroger Co\.$){1}",r"(?:Net loss$){1}","EARN.*","NET L.*",r"(?:Net income\/\(loss\)$){1}","Net earnings \/ \(loss\)",r"(?:Net income$){1}",r"(?:NET INCOME$)","NET EARNINGS ATTRIBUTABLE TO.*",r"(?:Net income \(loss\)$){1}","Net income attributable to The.*","Net income \(loss\)","Net income attributable to CBI","Net loss attributable to.*"]
+
+total_revenue_patterns = ["Total revenues",r"(?:Revenues$){1}",r"(?:Revenue$){1}","Total revenue","NET OPERATING REVENUES",r"(?:Sales$){1}","Total net revenue.*","Total Net Revenue","Total Revenue","Total Revenues","Net Revenue","Net revenue","Net Revenues","Sales to customer","Net Sale","Net Sales","NET SALES","Net sales","Total net sales","Net Operating Revenues","Total operating revenues"]
+
+sga_patterns = ["General.*administrative.*","Selling.*informational.*administrative.*","Selling.*general.*administrative","Total operating expenses", "Total.*selling.*administrative.*","Operating, selling, general and administrative expenses","Marketing.*administration.*research.*","Selling.*marketing.*and.*administrative.*expenses"]
+
+cost_of_goods_sold = ["Company restaurant expenses","Total cost of revenues","Merchandise costs",r"(Total costs and expenses$){1}","Total cost of revenue.*","Cost of sales","items shown separately below","Cost of Sale.*","COGs","Cost of goods sold","Cost of Revenue.?","Cost of revenue","Cost of products sold","Cost of services.*","Property operating expenses"]
+
+#research_and_dev = ["Research and development.*"]
+product_dev = ["Product Development.*"]
+sales_and_marketing = ["Selling and marketing","Sales and marketing","Selling, general, administrative and other"]
+total_operating_exp = ["Total operating expense.*","Total operating costs and expense.*",]
+
+net_interest_exp = ["Interest expense","Interest expense.*income.*net.*","Interest income.*expense.*net.*","Interest, net","Interest expense.*net", "Interest expense","Interest and debt expense","Net interest expense"]
+#other_income_exp = ["Other.*expense\/\(income\)","Other expenses","Other expense.*income.*net","Other expense.*net","Interest.*other.*income.*expense.*net","Other.*income/(loss).*net","Net.*other.*(income).*/.*expense","Other.*(income).*expense.*net","Other.*(income).*expense"]
+
+
+other_income_exp=["ajay"]
+
+tax_patterns = [r"Income tax benefit \(provision\)","Income tax expense","Income tax expense (benefit)","Income tax provision","Provision/(benefit) for taxes on income","Provision for income taxes","Income taxes","Provision.*for.*taxes.*on.*income.*"]
+
+
+
+depriciation_amort=["Depreciation",
+        "Amortization",
+        "Depreciation and amortization",
+        "Depreciation expense",
+        "Depreciation and amortization of property, equipment and intangibles"
+        "Depreciation, amortization, and other"
+        "Depreciation and amortization expense"
+        ]
+ebit_patterns=[
+            "Income from operations",
+            "Operating.*Profit",
+            "Income from operations",
+            "Operating.*income.*\(loss\)",
+            "Operating.*income\/\(loss\)",
+            "Operating.*profit",
+            "Operating loss",
+            "OPERATING INCOME",
+            "Operating income",
+            "Operating Income",
+            "Loss from operations"
+                ]
+statements_cash_flow=[".*Consolidated Statements of Cash Flows"]
 
 
 def get_all_excel_files(pdf_folder_path):
@@ -173,6 +185,8 @@ def get_required_sheets(xlsx_files):
                     break
             if found == 1:
                 break
+    if found!=1:
+        sheet_ref[xl_path] = 'Page 1'
 
     return sheet_ref
 
@@ -399,8 +413,7 @@ def get_income_values(xlsx_files, search_term, filename_company):
                                             elif work_sheet.cell(row=j, column=k+2).value =='-':
                                                 term_values.append(str(0))
                                                 found=1    
-                                    if found == 1:
-                                        break
+                                
                             elif len(terms_found) > 1:
                                 
                                 for k in range(10):
@@ -417,8 +430,8 @@ def get_income_values(xlsx_files, search_term, filename_company):
                                     break
 
                    
-                if found==1:
-                    break
+                        if found==1:
+                            break
                         
     if found!=1:
       
@@ -754,6 +767,11 @@ if __name__ == "__main__":
         cogs = convert_to_thousand(cogs, company_and_unit)
         cogs = cogs.values()
         print("COGS", len(cogs), cogs)
+        cogs_dict={"a": []}
+        if len(list(cogs)[0])>3: 
+            cogs_dict["a"].append(list(cogs)[0][3:])
+            cogs_new=cogs_dict.values()
+            cogs = [val for sublist in cogs_new for val in sublist]
         op.writelines("\n"+"cogs"+str(cogs))
         
         net_income_dict={"a": []}
@@ -780,8 +798,13 @@ if __name__ == "__main__":
         dep_amort = convert_to_thousand(dep_amort, company_and_unit)
         dep_amort = dep_amort.values()
         print("statements_cash_flow", len(dep_amort), dep_amort)
-        op.writelines("\n"+"statements_cash_flow"+str(dep_amort))
 
+        dep_amort_dict={"a": []}
+        if len(list(dep_amort)[0])>3:
+            dep_amort_dict["a"].append(list(dep_amort)[0][3:])
+            dep_amort_new=dep_amort_dict.values()
+            dep_amort = [val for sublist in dep_amort_new for val in sublist]
+        op.writelines("\n"+"dep_amort"+str(dep_amort))
         if not gross_profit_values:
             gross_profit={"a": []}
             for i in range(len((list(company_years)[0]))):
@@ -801,10 +824,10 @@ if __name__ == "__main__":
             cursor = connection.cursor()
 
         projections = 4  # hardcodedd
-
+        op.writelines("\n"+"before company master insert")
         query = "insert into company_master (companyname,company,period,actuals,projections,createdby,createdon,filename,industry,statementtype)" \
                 "values ('" + company_name + "','" + company + "','" + period + "'," + str(len(list(company_years)[0])) + "," + str(projections) + ",'" + user + "','" + created_on + "','" + filename + "','" + industry + "','" + statement_type + "')"
-        print(query,"===")
+        op.writelines("\n"+"after company master insert")
         cursor.execute(query)
         connection.commit()
         latest = 0
@@ -822,21 +845,38 @@ if __name__ == "__main__":
             	ebtmargin=0
             	netincomemargin=0
             else:
-            	grossprofitmargin = float((list(gross_profit_values)[0][i] / list(total_revenue)[0][i]) * 100)      
-            	ebitmargin = float((list(ebit)[0][i] / list(total_revenue)[0][i]) * 100)
-            	ebitdamargin = float((ebitda/ list(total_revenue)[0][i]) * 100)
-            	ebtmargin = float((list(ebt)[0][i] / list(total_revenue)[0][i]) * 100)
-            	netincomemargin = float((list(net_income)[0][i] /list(total_revenue)[0][i]) * 100)
+                grossprofitmargin = float((list(gross_profit_values)[0][i] / list(total_revenue)[0][i]) * 100)      
+                ebitmargin = float((list(ebit)[0][i] / list(total_revenue)[0][i]) * 100)
+                ebitdamargin = float((ebitda/ list(total_revenue)[0][i]) * 100)
+                print("ebitdamargin",ebitdamargin)
+                ebtmargin = float((list(ebt)[0][i] / list(total_revenue)[0][i]) * 100)
+                print("ebtmargin",ebtmargin)
+                netincomemargin = float((list(net_income)[0][i] /list(total_revenue)[0][i]) * 100)
+                if len(list(company_years)[0]) + latest>1:   
+                    revenuepercent = ((list(total_revenue)[0][i]-list(total_revenue)[0][i+1])/list(total_revenue)[0][i+1])*100
+                    print("revenuepercent",revenuepercent)
+                    cogspercent = (list(cogs)[0][i]/list(total_revenue)[0][i])*100
+                    print("cogspercent",cogspercent)
+                    sgapercent = (sga/list(total_revenue)[0][i])*100
+                    print("sgapercent",sgapercent)
+                    dapercent = (list(dep_amort)[0][i]/list(total_revenue)[0][i])*100
+                    print("dapercent",dapercent)
+ 
+
+            
+            
             query = "insert into company_actuals (companyname,asof,latest,totalrevenue,cogs,sga,da,netinterest,otherincome," \
-                    "taxes,grossprofit,ebit,ebitda,netincome,grossprofitmargin,ebitmargin,ebitdamargin,ebtmargin,netincomemargin,ebt) values(" \
+                    "taxes,grossprofit,ebit,ebitda,netincome,grossprofitmargin,ebitmargin,ebitdamargin,ebtmargin,netincomemargin,ebt," \
+                    "revenuepercent,cogspercent,sgapercent,dapercent) values(" \
                     "'" + company_name + "'," +str(list(company_years)[0][i]) + "," + str(
                         latest) + "," + str(list(total_revenue)[0][i]) + "," + str(list(cogs)[0][i]) + "," + str(sga) + "," + str(
                         list(dep_amort)[0][i]) + "," + str(net_interest_exp) + "," + str(list(other_income_exp)[0][i]) + "," + str(taxes) + "," + str(
                         list(gross_profit_values)[0][i]) + "," + str(list(ebit)[0][i]) + "," + str(ebitda) + "," + str(list(net_income)[0][i]) + "," + str(
                         grossprofitmargin) + "," + str(ebitmargin) + "," + str(ebitdamargin) + "," + str(
-                        ebtmargin) + "," + str(netincomemargin) + "," + str(list(ebt)[0][i]) + ")"                
+                        ebtmargin) + "," + str(netincomemargin) + "," + str(list(ebt)[0][i]) + "," + str(revenuepercent) + "," + str(cogspercent) + "," + str(sgapercent) + "," + str(dapercent) + ")"                
 
             cursor.execute(query)
+            
             connection.commit()  # save records
             latest -= 1
     except Exception as e:

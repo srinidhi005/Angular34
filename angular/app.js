@@ -229,7 +229,7 @@ app.post('/doc', function (req, res, next) {
   }
 })
 
-app.post('/file_data', function(req, res, next) {
+/*app.post('/file_data', function(req, res, next) {
   var {id, company, documentUUID, period} = req.query;
   var foldername = '2ExtractionJSON'//company.replace(/ /g, '_');
   foldername = foldername //+ '-' + (period || 'N');
@@ -409,8 +409,8 @@ console.log(filepath);
     res.status(200).send({status: 'SUCCESS'})
   })
 })
-
-app.get('/file_output', function(req, res, next) {
+*/
+/*app.get('/file_output', function(req, res, next) {
   // var foldername = req.query.file.replace(/ /g, '_');
   var files;
   var foldername =  '2ExtractionJSON'// + '-' + req.query.period;// foldername + '-' + req.query.period;
@@ -560,7 +560,7 @@ app.get('/file_output', function(req, res, next) {
     res.status(500).send({status: "Internal Server Error"})
   })
 })
-
+*/
  //function isLoggedIn(req, res, next) {
  // if (req.isAuthenticated())
    //    return next();

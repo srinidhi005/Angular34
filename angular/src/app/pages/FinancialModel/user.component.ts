@@ -108,7 +108,11 @@ let actualsInput = {
 					"p_EBITDA" : resObject[j].ebitda, 
 					"p_EBT" : resObject[j].ebt,
 					"p_NetInCome" : resObject[j].netincome,
-					"latest" : resObject[j].latest
+					"latest" : resObject[j].latest,
+					"revenuepercent" : resObject[j].revenuepercent,
+					"sgapercent" : resObject[j].sgapercent,
+					"cogspercent" : resObject[j].cogspercent,
+					"dapercent" : resObject[j].dapercent
 					}
 				);
 			yearsArray.push(resObject[j].asof);
@@ -134,7 +138,7 @@ let actualsInput = {
         },
     
         xAxis: {
-             categories: assumptionArray
+             categories: yearsArray
         },
             yAxis: {
                 min : -100,
@@ -149,6 +153,10 @@ let actualsInput = {
                     events: {
     
                         drag: function (e) {
+							if(!assumptionArray.includes(e.target.category))
+							{
+								return false;
+							}
                         },
                         drop: function (e) {  
                             updateP_TotalRevenueChart(e.y,e.target.category,e.x);
@@ -206,7 +214,7 @@ let actualsInput = {
         },
     
         xAxis: {
-             categories: assumptionArray
+             categories: yearsArray
         },
         yAxis: {
 			min : 0,
@@ -221,6 +229,10 @@ let actualsInput = {
                     events: {
     
                         drag: function (e) {
+							if(!assumptionArray.includes(e.target.category))
+							{
+								return false;
+							}
                         },
                         drop: function (e) {  
                             updatedCOGSChart(e.y,e.target.category,e.x);
@@ -280,7 +292,7 @@ let actualsInput = {
         },
     
         xAxis: {
-             categories: assumptionArray
+             categories: yearsArray
         },
         yAxis: {
 			crosshair:true,
@@ -295,6 +307,10 @@ let actualsInput = {
                     events: {
     
                         drag: function (e) {
+							if(!assumptionArray.includes(e.target.category))
+							{
+								return false;
+							}
                         },
                         drop: function (e) {  
                             updatedSGAndAChart(e.y,e.target.category,e.x);
@@ -354,7 +370,7 @@ let actualsInput = {
         },
     
         xAxis: {
-             categories: assumptionArray
+             categories: yearsArray
         },
         yAxis: {
 			min : 0,
@@ -369,6 +385,10 @@ let actualsInput = {
                     events: {
     
                         drag: function (e) {
+							if(!assumptionArray.includes(e.target.category))
+							{
+								return false;
+							}
                         },
                         drop: function (e) {  
                             updatedDAndAChart(e.y,e.target.category,e.x);
@@ -428,7 +448,7 @@ let actualsInput = {
         },
     
         xAxis: {
-             categories: assumptionArray
+             categories: yearsArray
         },
         yAxis: {
 			min : -100,
@@ -443,6 +463,10 @@ let actualsInput = {
                     events: {
     
                         drag: function (e) {
+							if(!assumptionArray.includes(e.target.category))
+							{
+								return false;
+							}
                         },
                         drop: function (e) {  
                             updatedOtherIncomeChart(e.y,e.target.category,e.x);
@@ -502,7 +526,7 @@ let actualsInput = {
         },
     
         xAxis: {
-             categories: assumptionArray
+             categories: yearsArray
         },
         yAxis: {
 		  crosshair: true,
@@ -517,6 +541,10 @@ let actualsInput = {
                     events: {
     
                         drag: function (e) {
+							if(!assumptionArray.includes(e.target.category))
+							{
+								return false;
+							}
                         },
                         drop: function (e) {  
                             updatenetinterestchart(e.y,e.target.category,e.x);
@@ -1110,18 +1138,45 @@ function loadData(){
                             "netinterest" : resObject[j].netinterest,
                             "latest" : resObject[j].latest,
                             "taxes" :resObject[j].taxespercent,
-                            // "latest" : resObject[j].latest
+							// "latest" : resObject[j].latest
+							
+							"revenuepercent" : resObject[j].revenuepercent,
+							"sgapercent" : resObject[j].sgapercent,
+							"cogspercent" : resObject[j].cogspercent,
+							"dapercent" : resObject[j].dapercent
+                            
                     });
                     yearsArray.push(resObject[j].asof);
                     assumptionArray.push(resObject[j].asof)
-                    revenueGrowthArray.push(resObject[j].revenuepercent);
-                    COGSArray.push(resObject[j].cogspercent);
-                    SGAndAArray.push(resObject[j].sgapercent);
-                    DAndAArray.push(resObject[j].dapercent);
-                    otherIncomeOrExpenseArray.push(resObject[j].otherincomepercent);
-                    netinterestdollarsArray.push(resObject[j].netinterestdollars);
+                    //revenueGrowthArray.push(resObject[j].revenuepercent);
+                    //COGSArray.push(resObject[j].cogspercent);
+                    //SGAndAArray.push(resObject[j].sgapercent);
+                    //DAndAArray.push(resObject[j].dapercent);
+                    //otherIncomeOrExpenseArray.push(resObject[j].otherincomepercent);
+                    //netinterestdollarsArray.push(resObject[j].netinterestdollars);
                 }
-                revenueGrowthChart.series[0].update({data:revenueGrowthArray});
+				
+				for(let i=0;i<yearsArray.length;i++){
+				    revenueGrowthArray.push((actualObj.get(yearsArray[i]).revenuepercent == undefined)?0: actualObj.get(yearsArray[i]).revenuepercent );
+					
+					COGSArray.push((actualObj.get(yearsArray[i]).cogspercent == undefined)?0: actualObj.get(yearsArray[i]).cogspercent );
+					
+					SGAndAArray.push((actualObj.get(yearsArray[i]).sgapercent == undefined)?0: actualObj.get(yearsArray[i]).sgapercent );
+					
+					DAndAArray.push((actualObj.get(yearsArray[i]).revenuepercent == undefined)?0: actualObj.get(yearsArray[i]).revenuepercent );
+					
+					otherIncomeOrExpenseArray.push((actualObj.get(yearsArray[i]).otherincomepercent == undefined)?0: actualObj.get(yearsArray[i]).otherincomepercent );
+					
+					netinterestdollarsArray.push((actualObj.get(yearsArray[i]).netIterestExpense == undefined)?0: actualObj.get(yearsArray[i]).netIterestExpense );
+					
+                    //COGSArray.push(actualObj.get(yearsArray[i]).cogspercent);
+                    //SGAndAArray.push(actualObj.get(yearsArray[i]).sgapercent);
+                    //DAndAArray.push(actualObj.get(yearsArray[i]).dapercent);
+                    //otherIncomeOrExpenseArray.push(actualObj.get(yearsArray[i]).otherincomepercent);
+                    //netinterestdollarsArray.push(actualObj.get(yearsArray[i]).netinterestdollars);
+				}
+				
+				revenueGrowthChart.series[0].update({data:revenueGrowthArray});
                 COGSChart.series[0].update({data:COGSArray});
                 SGAndAChart.series[0].update({data:SGAndAArray});
                 DAndAChart.series[0].update({data:DAndAArray});
@@ -1342,18 +1397,20 @@ function loadData(){
 		  str=str+"<option _ngcontent-sut-c5='' value='"+presentScenarios[i]+"' ng-reflect-value='"+presentScenarios[i]+"'>		 Scenario "+presentScenarios[i]+" </option>";
 													              }
 														                   		 $("#sel2").html(str);
-																                  });
-
-																		                $( "#sel2" ).change(function() {
+				$("#sel2").val(scenarioNumber);														 });
+																		 console.log("secnario no 0805",scenarioNumber);
+				
+																	                $( "#sel2" ).change(function() {
 																				                
 																				                let scerno=$("#sel2").val();
-																				 window.location.href="/#/FinancialModel?companyname="+companyName+"&scenario="+scerno;
-																								                        window.location.reload();
+		 window.location.href="/#/FinancialModel?companyname="+companyName+"&scenario="+scerno;
+		 window.location.reload();
+		 
 																											            });
 
 
     }
-  
+   
 
  }
    
