@@ -1,0 +1,153 @@
+
+Page#1
+ITEM 8. FINANCIAL STATEMENTS AND SUPPLEMENTARY DATA
+Williams-Sonoma, Inc.
+Consolidated Statements of Earnings
+In thousands, except per share amounts Fiscal 2017 Fiscal 2016 Fiscal 2015
+E-commerce net revenues $ 2,778,457 $ 2,633,602 $ 2,522,580
+Retail net revenues 2,513,902 2,450,210 2,453,510
+Net revenues 5,292,359 5,083,812 4,976,090
+Cost of goods sold 3,360,648 3,200,502 3,131,876
+Gross profit 1,931,711 1,883,310 1,844,214
+Selling, general and administrative expenses 1,477,900 1,410,711 1,355,580
+Operating income 453,811 472,599 488,634
+Interest (income) expense, net 1,372 688 627
+Earnings before income taxes 452,439 471,911 488,007
+Income taxes 192,894 166,524 177,939
+Net earnings $ 259,545 $ 305,387 $ 310,068
+Basic earnings per share $ 3.03 $ 3.45 $ 3.42
+Diluted earnings per share $ 3.02 $ 3.41 $ 3.37
+Shares used in calculation of earnings per share:
+Basic 85,592 88,594 90,787
+Diluted 86,080 89,462 92,102
+See Notes to Consolidated Financial Statements.
+Williams-Sonoma, Inc.
+Consolidated Statements of Comprehensive Income
+In thousands Fiscal 2017 Fiscal 2016 Fiscal 2015
+Net earnings $ 259,545 $ 305,387 $ 310,068
+Other comprehensive income (loss):
+Foreign currency translation adjustments 3,730 1,523 (7,958)
+Change in fair value of derivative financial instruments, net of tax
+(tax benefit) of $(259), $(327) and $380 (715) (916) 1,074
+Reclassification adjustment for realized (gain) loss on derivative
+financial instruments, net of tax (tax benefit) of $(38), $(41) and
+$421 106 106 (1,184)
+Comprehensive income $ 262,666 $ 306,100 $ 302,000
+See Notes to Consolidated Financial Statements.
+38
+Page#2
+Williams-Sonoma, Inc.
+Consolidated Balance Sheets
+In thousands, except per share amounts Jan. 28, 2018 Jan. 29, 2017
+ASSETS
+Current assets
+Cash and cash equivalents $ 390,136 $ 213,713
+Accounts receivable, net 90,119 88,803
+Merchandise inventories, net 1,061,593 977,505
+Prepaid catalog expenses 24,028 23,625
+Prepaid expenses 58,693 52,882
+Other assets 11,876 10,652
+Total current assets 1,636,445 1,367,180
+Property and equipment, net 932,283 923,283
+Deferred income taxes, net 67,306 135,238
+F
+Other assets, net 149,715 51,178
+o
+r
+Total assets $ 2,785,749 $ 2,476,879
+m
+LIABILITIES AND STOCKHOLDERS’ EQUITY
+1
+0
+Current liabilities
+-
+K
+Accounts payable $ 459,378 $ 453,710
+Accrued salaries, benefits and other liabilities 135,884 130,187
+Customer deposits 292,460 294,276
+Income taxes payable 56,783 23,245
+Other liabilities 63,318 59,838
+Total current liabilities 1,007,823 961,256
+Deferred rent and lease incentives 202,134 196,188
+Long-term debt 299,422 —
+Other long-term obligations 72,804 71,215
+Total liabilities 1,582,183 1,228,659
+Commitments and contingencies – See Note I
+Stockholders’ equity
+Preferred stock: $.01 par value; 7,500 shares authorized; none issued — —
+Common stock: $.01 par value; 253,125 shares authorized; 83,726 and 87,325
+shares issued and outstanding at January 28, 2018 and January 29, 2017,
+respectively 837 873
+Additional paid-in capital 562,814 556,928
+Retained earnings 647,422 701,702
+Accumulated other comprehensive loss (6,782) (9,903)
+Treasury stock – at cost: 11 and 20 shares as of January 28, 2018 and
+January 29, 2017, respectively (725) (1,380)
+Total stockholders’ equity 1,203,566 1,248,220
+Total liabilities and stockholders’ equity $ 2,785,749 $ 2,476,879
+See Notes to Consolidated Financial Statements.
+39
+Page#3
+Williams-Sonoma, Inc.
+Consolidated Statements of Cash Flows
+In thousands Fiscal 2017 Fiscal 2016 Fiscal 2015
+Cash flows from operating activities:
+Net earnings $ 259,545 $ 305,387 $ 310,068
+Adjustments to reconcile net earnings to net cash provided by (used in) operating
+activities:
+Depreciation and amortization 183,077 173,195 167,760
+Loss on disposal/impairment of assets 1,889 3,806 4,339
+Amortization of deferred lease incentives (25,372) (25,212) (24,721)
+Deferred income taxes 63,381 7,114 (7,436)
+Tax benefit related to stock-based awards — 3,230 14,592
+Excess tax benefit related to stock-based awards — (4,894) (14,494)
+Stock-based compensation expense 42,988 51,116 41,357
+Other (135) (423) 149
+Changes in:
+Accounts receivable 149 (9,794) (12,849)
+F
+Merchandise inventories (80,235) 4,493 (92,647)
+o
+r
+Prepaid catalog expenses (403) 5,294 5,022
+m
+Prepaid expenses and other assets (16,092) (6,367) (9,245)
+1
+Accounts payable 2,382 3,169 60,507
+0
+Accrued salaries, benefits and other liabilities 9,157 25,876 (135)
+-
+K
+Customer deposits (2,394) (3,037) 35,877
+Deferred rent and lease incentives 28,226 35,559 31,334
+Income taxes payable 33,541 (43,803) 34,548
+Net cash provided by operating activities 499,704 524,709 544,026
+Cash flows from investing activities:
+Purchases of property and equipment (189,712) (197,414) (202,935)
+Acquisition of Outward, Inc., net of cash received (80,528) — —
+Other 480 439 769
+Net cash used in investing activities (269,760) (196,975) (202,166)
+Cash flows from financing activities:
+Proceeds from issuance of long-term debt 300,000 — —
+Repurchases of common stock (196,179) (151,272) (224,995)
+Borrowings under revolving line of credit 170,000 125,000 200,000
+Repayments of borrowings under revolving line of credit (170,000) (125,000) (200,000)
+Payment of dividends (135,010) (133,539) (127,636)
+Tax withholdings related to stock-based awards (18,130) (27,062) (31,790)
+Excess tax benefit related to stock-based awards — 4,894 14,494
+Proceeds related to stock-based awards — 1,532 2,647
+Repayment of long-term obligations — — (1,968)
+Debt issuance costs (1,191) (359) (135)
+Other (1,197) — —
+Net cash used in financing activities (51,707) (305,806) (369,383)
+Effect of exchange rates on cash and cash equivalents (1,814) (1,862) (1,757)
+Net increase (decrease) in cash and cash equivalents 176,423 20,066 (29,280)
+Cash and cash equivalents at beginning of year 213,713 193,647 222,927
+Cash and cash equivalents at end of year $ 390,136 $ 213,713 $ 193,647
+Supplemental disclosure of cash flow information:
+Cash paid during the year for interest $ 2,915 $ 2,202 $ 1,989
+Cash paid during the year for income taxes, net of refunds $ 99,062 $ 203,426 $ 134,478
+Non-cash investing activities:
+Purchases of property and equipment not yet paid for at end of year $ 1,257 $ 625 $ 2,715
+See Notes to Consolidated Financial Statements.
+41

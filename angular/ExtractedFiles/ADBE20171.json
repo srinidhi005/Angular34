@@ -1,0 +1,191 @@
+[annotation_spec_id: "1168518077046849536"
+display_name: "CashEquivalents"
+text_extraction {
+  score: 0.9999692440032959
+  text_segment {
+    start_offset: 40
+    end_offset: 65
+    content: "Cash and cash equivalents"
+  }
+}
+, annotation_spec_id: "4066302962283053056"
+display_name: "AccountsReceivable"
+text_extraction {
+  score: 0.9890748858451843
+  text_segment {
+    start_offset: 133
+    end_offset: 150
+    content: "Trade receivables"
+  }
+}
+, annotation_spec_id: "7495512603548975104"
+display_name: "TotalCurrentAssets"
+text_extraction {
+  score: 0.9999356269836426
+  text_segment {
+    start_offset: 303
+    end_offset: 323
+    content: "Total current assets"
+  }
+}
+, annotation_spec_id: "4313156516858298368"
+display_name: "PPE"
+text_extraction {
+  score: 0.9982444643974304
+  text_segment {
+    start_offset: 344
+    end_offset: 371
+    content: "Property and equipment, net"
+  }
+}
+, annotation_spec_id: "83994991780691968"
+display_name: "Goodwill"
+text_extraction {
+  score: 0.9999719858169556
+  text_segment {
+    start_offset: 388
+    end_offset: 396
+    content: "Goodwill"
+  }
+}
+, annotation_spec_id: "7058522702205681664"
+display_name: "TotalAssets"
+text_extraction {
+  score: 0.9999985098838806
+  text_segment {
+    start_offset: 539
+    end_offset: 551
+    content: "Total assets"
+  }
+}
+, annotation_spec_id: "1730905080514740224"
+display_name: "AccountsPayable"
+text_extraction {
+  score: 0.723232626914978
+  text_segment {
+    start_offset: 636
+    end_offset: 650
+    content: "Trade payables"
+  }
+}
+, annotation_spec_id: "8015678360510267392"
+display_name: "AccruedLiabilities"
+text_extraction {
+  score: 0.9988714456558228
+  text_segment {
+    start_offset: 670
+    end_offset: 686
+    content: "Accrued expenses"
+  }
+}
+, annotation_spec_id: "3789331585199767552"
+display_name: "TotalCurrentLiabilities"
+text_extraction {
+  score: 0.9999998211860657
+  text_segment {
+    start_offset: 775
+    end_offset: 800
+    content: "Total current liabilities"
+  }
+}
+, annotation_spec_id: "3101688217095634944"
+display_name: "TotalLiabilities"
+text_extraction {
+  score: 0.7623589634895325
+  text_segment {
+    start_offset: 1038
+    end_offset: 1055
+    content: "Total liabilities"
+  }
+}
+, annotation_spec_id: "8415372827439398912"
+display_name: "TotalShareholdersEquity"
+text_extraction {
+  score: 0.8500612378120422
+  text_segment {
+    start_offset: 1609
+    end_offset: 1635
+    content: "Total stockholders\342\200\231 equity"
+  }
+}
+, annotation_spec_id: "1975506835276300288"
+display_name: "TotalLiabilitiesAndEquity"
+text_extraction {
+  score: 0.9999372363090515
+  text_segment {
+    start_offset: 1656
+    end_offset: 1698
+    content: "Total liabilities and stockholders\342\200\231 equity"
+  }
+}
+, annotation_spec_id: "6853749656648679424"
+display_name: "BalanceSheetStatement"
+text_extraction {
+  score: 0.9999701380729675
+  text_segment {
+    start_offset: 1813
+    end_offset: 1840
+    content: "CONSOLIDATED BALANCE SHEETS"
+  }
+}
+, annotation_spec_id: "775461361814601728"
+display_name: "Taxes"
+text_extraction {
+  score: 0.6446676850318909
+  text_segment {
+    start_offset: 2973
+    end_offset: 2999
+    content: "Provision for income taxes"
+  }
+}
+, annotation_spec_id: "7692990389455683584"
+display_name: "NetIncome"
+text_extraction {
+  score: 0.9830389022827148
+  text_segment {
+    start_offset: 3024
+    end_offset: 3034
+    content: "Net income"
+  }
+}
+, annotation_spec_id: "2504843618724872192"
+display_name: "Company"
+text_extraction {
+  score: 0.9986994862556458
+  text_segment {
+    start_offset: 3378
+    end_offset: 3404
+    content: "ADOBE SYSTEMS INCORPORATED"
+  }
+}
+, annotation_spec_id: "2470331048240611328"
+display_name: "IncomeStatement"
+text_extraction {
+  score: 0.9990073442459106
+  text_segment {
+    start_offset: 3405
+    end_offset: 3438
+    content: "CONSOLIDATED STATEMENTS OF INCOME"
+  }
+}
+, annotation_spec_id: "3276756856516640768"
+display_name: "Units"
+text_extraction {
+  score: 0.9947553873062134
+  text_segment {
+    start_offset: 3443
+    end_offset: 3452
+    content: "thousands"
+  }
+}
+, annotation_spec_id: "1351922114118025216"
+display_name: "DandA"
+text_extraction {
+  score: 0.7748500108718872
+  text_segment {
+    start_offset: 3728
+    end_offset: 3768
+    content: "Depreciation, amortization and accretion"
+  }
+}
+]

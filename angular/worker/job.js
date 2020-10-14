@@ -15,7 +15,8 @@ client = redis.createClient();
 
 let queue = kue.createQueue();
 
-queue.process('pdf', function(job, done){
+queue.process('pdf', function(job, done)
+{
    // console.log("before folder creation",job.id)
 //log.info("level1");
     var jobId = job.id;
@@ -26,7 +27,7 @@ queue.process('pdf', function(job, done){
     var companyName = job.data.company.replace(/ /g, '_')   
 	var statementtype=job.data.statementtype.replace(/ /g, '_')
 	var industry=job.data.industry.replace(/ /g,'')
-	var filename=job.data.filename;
+	var filename=job.data.filename
     var folderName = companyName + '-' + (job.data.period || 'N');
     if (job.data.filename.indexOf('.pdf') != -1) {
 	    //console.log("foldername",folderName)
@@ -35,14 +36,24 @@ queue.process('pdf', function(job, done){
 	    console.log("industry",industry)
 	    console.log("filename",filename)
 	    console.log("companyname",companyName)
-       // cmd = 'python3 /home/srinidhi/angular/extractor/pdf/mapping.py ';
+
         //cmd += job.data.path + ' ' + '/home/srinidhi/angular/output/' + ' ' + '/home/srinidhi/angular/extractor/pdf' +' '+companyName;
-       // cmd = 'python3 /home/srinidhi/angular/extractor/xlsxparser.py /home/srinidhi/angular/extractor/Nike.pdf';
-          cmd = 'sudo python3 /home/srinidhi/angular/extractor/PDF_Extractor_Retail.py '+job.data.path +' '+companyName +' '+'Y admin Consumer_Retail all_statements'; 
-        cmd = 'sudo python3 /home/srinidhi/angular/extractor/PDF_Extractor_Retail.py '+job.data.path +' '+companyName +' '+job.data.period+' '+'admin'+' '+industry+' ' +statementtype; 
+      // cmd = 'sudo python3.7 /home/srinidhi/angular/extractor/txt_conversion.py '+'gs://extraction-engine/'+filename;
+//workingUPLOADING
+cmd='sudo python3.7 /home/srinidhi/angular/extractor/upload.py'+' '+'/home/srinidhi/angular/ExtractedFiles/'+filename+' '+companyName+'/'+filename; 
+cmd1 ='sudo python3.7 /home/srinidhi/angular/extractor/txt_conversion.py'+' '+'gs://sample_pdf/'+companyName+'/'+filename;
+//cmd2 ='sudo python3.7 /home/srinidhi/angular/extractor/pdf_automl_txt.py'+' '+'gs://sample_pdf/'+companyName+'/'+filename+' '+'projects/410058770032/locations/us-central1/models/TEN7257975210995875840';
+//cmdv='sudo python3.7 /home/srinidhi/angular/extractor/vision.py'+' '+'gs://sample_pdf/'+companyName+'/'+filename;
+
+cmd2 ='sudo python3.7 /home/srinidhi/angular/extractor/automl_pdf_extractor_retail.py'+' '+'gs://sample_pdf/'+companyName+'/'+filename+' '+'projects/410058770032/locations/us-central1/models/TEN8689222691011428352'+' '+companyName +' '+job.data.period+' '+'admin'+' '+industry+' '+statementtype+' '+filename;
+	    //          cmd = 'sudo python3 /home/srinidhi/angular/extractor/PDF_Extractor_Retail.py '+job.data.path +' '+companyName +' '+'Y admin Consumer_Retail all_statements'; 
+	 //   cmd = 'sudo python3 /home/srinidhi/angular/extractor/PDF_Extractor_Retail.py '+job.data.path +' '+companyName +' '+job.data.period+' '+'admin'+' '+industry+' ' +statementtype; 
 	    //cmd = 'sudo python3 /home/srinidhi/angular/extractor/PDF_Extractor_Retail.py/';
 	//	   cmd +=job.data.path+' '+companyName+'Y  admin Consumer_Retail all_statements'; 
-	console.log("level1",cmd)
+console.log("level0-->",cmd)	
+console.log("level1--->",cmd1)
+//console.log("level2---->",cmdv)	
+console.log("level3-->",cmd2)
     } else if (job.data.filename.indexOf('.csv') != -1) {
         cmd = 'python3 extractor/csv-excel/mapping.py ';
         cmd += job.data.path + ' ' + './output/' + folderName + '/file' + ' ' + 'extractor/csv-excel';
@@ -51,7 +62,7 @@ queue.process('pdf', function(job, done){
         cmd = 'python3 extractor/csv-excel/mapping.py ';
         cmd += job.data.path + ' ' + './output/' + folderName + '/file' + ' ' + 'extractor/csv-excel' + ' ' + csvFile;
     }
-   // console.log(cmd)
+    //console.log(cmd2)
 	//console.log("job created == by us")
     var files = [
         path.join(__dirname, '../output', folderName, 'file0.json'),
@@ -88,16 +99,35 @@ queue.process('pdf', function(job, done){
                         jobData = Object.assign({}, jobData, {status: 'COMPLETED'});
                         client.set('q:job:'+jobId, JSON.stringify(jobData));
                         console.log('job completed successfully')
-                        if (fs.existsSync(job.data.path)) {
-                            fs.unlinkSync(job.data.path);
-                        }
+                        //if (fs.existsSync(job.data.path)) {
+                         //  fs.unlinkSync(job.data.path);
+                        //}
                         done();
                     })
                 }).catch(err => {
                     console.log(err)
                 })
             }
-        }
+		   exec(cmd1, async (err, stdOut, stdErr) => {
+			                    if (err) {
+						    console.log('------------------cmd1 err')
+						                    } else {
+									                        console.log('cmd1 success')
+									                    }
+			                });
+                             
+                              
+                                                      
+                                                                          
+                            
+                  setTimeout(function(){exec(cmd2, async (err, stdOut, stdErr) => {
+                                            if (err) {
+                                                    console.log('------------------cmd2 err')
+							console.log('error with cmd2',err)
+                                                                    } else {
+                                                                                                console.log('cmd2 success')
+                                                                                            }
+                                        })},9000);      }
     })
  })
 

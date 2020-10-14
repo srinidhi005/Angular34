@@ -42,6 +42,7 @@
 			  "src/assets/js/profile.js",
               "src/assets/js/import.js",
 	          "src/assets/js/login.js",
+			"src/assets/js/balancesheet.js",
 			  "node_modules/pdfmake/build/pdfmake.min.js",
 			  "node_modules/html2canvas/dist/html2canvas.min.js",
 			  "node_modules/jspdf/dist/jspdf.min.js",

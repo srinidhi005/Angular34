@@ -1148,3 +1148,30 @@ after company master insert2020-05-11 16:40:06
 
 list index out of range
 
+2020-05-13 09:10:40
+
+list index out of range
+
+2020-05-14 13:05:41
+
+list index out of range
+
+2020-05-14 13:08:41
+
+list index out of range
+
+{'3M Company and Subsidiaries': ['2018', '2017', '2016']}dict_values([['2018', '2017', '2016']])
+totalrevenuedict_values([[32765000.0, 31657000.0, 30109000.0]])
+grossprofitdict_values([])
+netinterestdict_values([[0.0, 0.0, 0.0]])
+otherincomedict_values([[0.0, 0.0, 0.0]])
+taxdict_values([[1637000.0, 2679000.0, 1995000.0]])
+ebitdict_values([[7207000.0, 7692000.0, 7027000.0]])
+cogsdict_values([[16682000.0, 16055000.0, 15118000.0]])
+netdict_values([[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]])
+net[[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]]
+ebtdict_values([[7000000.0, 7548000.0, 7053000.0]])
+dep_amortdict_values([[0.0, 0.0, 0.0]])
+gpvaluedict_values([[16083000.0, 15602000.0, 14991000.0]])
+before company master insert
+after company master insert

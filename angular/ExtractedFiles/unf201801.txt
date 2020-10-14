@@ -1,0 +1,139 @@
+
+Page#1
+Table of Contents
+UNITED NATURAL FOODS, INC. AND SUBSIDIARIES
+CONSOLIDATED BALANCE SHEETS
+(In thousands, except per share data)
+July 28, July 29, 
+  
+2018 2017
+ASSETS 
+Current assets: 
+Cash and cash equivalents $ 23,315  $ 15,414
+Accounts receivable, net of allowance of $15,996 and $13,939, respectively 579,702  525,636
+Inventories 1,135,775  1,031,690
+Deferred income taxes —  40,635
+Prepaid expenses and other current assets 50,122  49,295
+Total current assets 1,788,914  1,662,670
+Property and equipment, net 571,146  602,090
+Goodwill 362,495  371,259
+Intangible assets, net of accumulated amortization of $64,438 and $49,926, respectively 193,209  208,289
+Other assets 48,708  42,255
+Total assets $ 2,964,472  $ 2,886,563
+LIABILITIES AND STOCKHOLDERS' EQUITY 
+Current liabilities: 
+Accounts payable $ 517,125  $ 534,616
+Accrued expenses and other current liabilities 169,658  157,243
+Current portion of long-term debt 12,441  12,128
+Total current liabilities 699,224  703,987
+Notes payable 210,000  223,612
+Deferred income taxes 44,384  98,833
+Other long-term liabilities 27,200  28,347
+Long-term debt, excluding current portion 137,709  149,863
+Total liabilities 1,118,517  1,204,642
+Commitments and contingencies (Note 10) 
+Stockholders' equity: 
+Preferred stock, $0.01 par value, authorized 5,000 shares; none issued or outstanding —  —
+Common stock, $0.01 par value, authorized 100,000 shares; 51,025 shares issued and 50,411 shares outstanding at
+July 28, 2018; 50,622 issued and outstanding shares at July 29, 2017 510  506
+Additional paid-in capital 483,623  460,011
+Treasury stock at cost (24,231)  —
+Accumulated other comprehensive loss (14,179)  (13,963)
+Retained earnings 1,400,232  1,235,367
+Total stockholders' equity 1,845,955  1,681,921
+Total liabilities and stockholders' equity $ 2,964,472  $ 2,886,563
+  
+See accompanying notes to consolidated financial statements.
+40
+Page#2
+Table of Contents
+UNITED NATURAL FOODS, INC. AND SUBSIDIARIES
+CONSOLIDATED STATEMENTS OF INCOME
+(In thousands, except per share data)
+ 
+Fiscal year ended
+July 28, July 29, July 30, 
+  
+ 2018 2017 2016
+Net sales $ 10,226,683  $ 9,274,471  $ 8,470,286
+Cost of sales 8,703,916  7,845,550  7,190,935
+Gross profit 1,522,767  1,428,921  1,279,351
+Operating expenses 1,279,529  1,196,032  1,049,690
+Restructuring and asset impairment expenses 16,013  6,864  5,552
+Total operating expenses 1,295,542  1,202,896  1,055,242
+Operating income 227,225  226,025  224,109
+Other expense (income): 
+Interest expense 16,471  17,114  16,259
+Interest income (446)  (360)  (1,115)
+Other, net (1,545)  (5,152)  743
+Total other expense, net 14,480  11,602  15,887
+Income before income taxes 212,745  214,423  208,222
+Provision for income taxes 47,075  84,268  82,456
+Net income $ 165,670  $ 130,155  $ 125,766
+Basic per share data: 
+Net income $ 3.28 $ 2.57 $ 2.50
+Weighted average basic shares of common stock 50,530  50,570  50,313
+Diluted per share data: 
+Net income $ 3.26  $ 2.56  $ 2.50
+Weighted average diluted shares of common stock 50,837  50,775  50,399
+  
+See accompanying notes to consolidated financial statements.
+41
+Page#3
+Table of Contents
+UNITED NATURAL FOODS, INC. AND SUBSIDIARIES
+CONSOLIDATED STATEMENTS OF CASH FLOWS
+ 
+Fiscal year ended
+July 28, July 29, July 30, 
+ 
+(In
+thousands) 2018 2017 2016
+CASH FLOWS FROM OPERATING ACTIVITIES: 
+Net income $ 165,670 $ 130,155  $ 125,766
+Adjustments to reconcile net income to net cash provided by operating activities: 
+Depreciation and amortization 87,631 86,051  71,006
+Deferred income tax (benefit) expense (14,819) (1,891)  12,480
+Share-based compensation 25,783 25,675  15,308
+Excess tax deficit from share-based payment arrangements — 1,320  83
+Loss on disposition of assets 2,820 943  458
+Restructuring and asset impairment 3,370 640  758
+Goodwill impairment 7,872 —  —
+Gain associated with disposal of investment (699) (6,106)  —
+Change in accounting estimate (20,909) —  —
+Provision for doubtful accounts 12,006 5,728  6,426
+  Non-cash interest expense (income) 275 175  (106)
+Changes in assets and liabilities, net of acquired companies: 
+Accounts receivable (67,283) (38,757)  29,417
+Inventories (108,795) (6,929)  2,113
+Prepaid expenses and other assets 4,473 (6,383)  5,381
+Accounts payable 4,395 90,217  14,379
+Accrued expenses and other liabilities 7,682 (62)  13,140
+Net cash provided by operating activities 109,472 280,776  296,609
+CASH FLOWS FROM INVESTING ACTIVITIES: 
+Capital expenditures (44,608) (56,112)  (41,375)
+Purchases of acquired businesses, net of cash acquired (39) (9,207)  (306,724)
+Long-term investment (3,397) (2,000) —
+Proceeds from disposal of investment 756  9,192  —
+Payment of company owned life insurance premiums — (2,000) (2,925)
+Proceeds from disposition of assets 283 168  109
+Net cash used in investing activities (47,005) (59,959)  (350,915)
+CASH FLOWS FROM FINANCING ACTIVITIES: 
+Proceeds from borrowings under revolving credit line 556,061 215,662  709,972
+Repayments of borrowings under revolving credit line (569,671) (418,693)  (646,481)
+Repayments of long-term debt (12,128) (11,546)  (11,255)
+Repurchase of common stock (24,231)  —  —
+(Decrease) increase in bank overdraft (434) (7,445)  6,063
+Proceeds from exercise of stock options 975 274  2,011
+Payment of employee restricted stock tax withholdings (4,563) (1,313)  (1,717)
+Excess tax deficit from share-based payment arrangements — (1,320)  (83)
+Capitalized debt issuance costs — (180)  (2,164)
+Net cash (used in) provided by financing activities (53,991) (224,561)  56,346
+Effect of exchange rate changes on cash and cash equivalents (575) 565  (827)
+NET INCREASE (DECREASE) IN CASH AND CASH EQUIVALENTS 7,901 (3,179)  1,213
+Cash and cash equivalents at beginning of period 15,414 18,593  17,380
+Cash and cash equivalents at end of period $ 23,315 $ 15,414  $ 18,593
+Supplemental disclosures of cash flow information: 
+Cash paid for interest $ 16,471 $ 17,115  $ 16,696
+Cash paid for federal and state income taxes, net of refunds $ 64,042 $ 78,984  $ 67,028
+See accompanying notes to consolidated financial statements.

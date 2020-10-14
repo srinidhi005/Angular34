@@ -211,14 +211,22 @@ $("#compsearch").on('input', function () {
   }
   
 getCompanyName(){
-    var resultString = "";
-    try{	
-        var queryString = window.location.href.split("?")[1];
+	var companyNameDisplay = localStorage.getItem("companyName");    
+	var resultString = "";
+    try{
+    	if(window.location.href.includes("kpi")){
+		
+		return " : "+companyNameDisplay;
+	}
+	 var queryString = window.location.href.split("?")[1];
+
    	    var companyName = (queryString.split("&")[0]).split("=")[1];
-	    resultString = " : " + companyName
-        var scenarioNumber = (queryString.split("&")[1]).split("=")[1];
+	    resultString = " : " + companyName;
+        //var scenarioNumber = (queryString.split("&")[1]).split("=")[1];
 	//  resultString = resultString + " : Scenario "+scenarioNumber;
 	resultString = resultString 
+	//console.log("companyNamedisplay",companyNamedisplay);
+	
 	    return resultString;
         }catch (error) {
             return resultString;

@@ -1,0 +1,158 @@
+
+Page#1
+Dana Incorporated
+Consolidated Statement of Operations
+(In millions, except per share amounts)
+ 
+ 2016  2015  2014
+Net sales $ 5,826 $ 6,060 $ 6,617
+Costs and expenses 
+Cost of sales 4,982  5,211  5,672
+Selling, general and administrative expenses 406  391  411
+Amortization of intangibles 8  14  42
+Restructuring charges, net 36  15  21
+Loss on sale of subsidiaries (80) 
+Impairment of long-lived assets  (36) 
+Loss on disposal group held for sale (80)
+Pension settlement charges (42)
+Other income, net 18  1  33
+Income before interest and income taxes 332  394  382
+Loss on extinguishment of debt (17)  (2)  (19)
+Interest income 13  13  15
+Interest expense 113  113  118
+Income from continuing operations before income taxes 215  292  260
+Income tax expense (benefit) (424)  82  (70)
+Equity in earnings (losses) of affiliates 14  (34)  13
+Income from continuing operations 653  176  343
+Income (loss) from discontinued operations  4  (15)
+Net income 653  180  328
+Less: Noncontrolling interests net income 13  21  9
+Net income attributable to the parent company 640  159  319
+Preferred stock dividend requirements 7
+Net income available to common stockholders $ 640  $ 159  $ 312
+ 
+Net income per share available to parent company common stockholders: 
+Basic: 
+Income from continuing operations $ 4.38  $ 0.98  $ 2.07
+Income (loss) from discontinued operations $ —  $ 0.02  $ (0.10)
+Net income $ 4.38  $ 1.00  $ 1.97
+ 
+Diluted: 
+Income from continuing operations $ 4.36  $ 0.97  $ 1.93
+Income (loss) from discontinued operations $ —  $ 0.02  $ (0.09)
+Net income $ 4.36  $ 0.99  $ 1.84
+ 
+Weighted-average common shares outstanding 
+Basic 146.0  159.0  158.0
+Diluted 146.8  160.0  173.5
+ 
+Dividends declared per common share $ 0.24  $ 0.23  $ 0.20
+ 
+The accompanying notes are an integral part of the consolidated financial statements.
+ 
+42
+Page#2
+Dana Incorporated
+Consolidated Balance Sheet
+(In millions, except share and per share amounts) 
+ 2016  2015
+Assets 
+Current assets 
+Cash and cash equivalents $ 707  $ 791
+Marketable securities 30  162
+Accounts receivable 
+Trade, less allowance for doubtful accounts of $6 in 2016 and $5 in 2015 721  673
+Other 110  115
+Inventories 638  625
+Other current assets 78  65
+Total current assets 2,284  2,431
+Goodwill 90  80
+Intangibles 109  102
+Deferred tax assets 588  96
+Other noncurrent assets 226  275
+Investments in affiliates 150  150
+Property, plant and equipment, net 1,413  1,167
+Total assets $ 4,860  $ 4,301
+ 
+Liabilities and equity 
+Current liabilities 
+Notes payable, including current portion of long-term debt $ 69  $ 22
+Accounts payable 819  712
+Accrued payroll and employee benefits 149  145
+Taxes on income 15  17
+Other accrued liabilities 201  193
+Total current liabilities 1,253  1,089
+Long-term debt, less debt issuance costs of $21 in 2016 and 2015 1,595  1,553
+Pension and postretirement obligations 565  521
+Other noncurrent liabilities 205  307
+Total liabilities 3,618  3,470
+Commitments and contingencies (Note 15) 
+Parent company stockholders' equity 
+Preferred stock, 50,000,000 shares authorized, $0.01 par value, no shares outstanding —  —
+Common stock, 450,000,000 shares authorized, $0.01 par value, 143,938,280 and 150,068,040 shares outstanding 2  2
+Additional paid-in capital 2,327  2,311
+Retained earnings (accumulated deficit) 195  (410)
+Treasury stock, at cost (6,812,784 and 23,963 shares) (83)  (1)
+Accumulated other comprehensive loss (1,284)  (1,174)
+Total parent company stockholders' equity 1,157  728
+Noncontrolling interests 85  103
+Total equity 1,242  831
+Total liabilities and equity $ 4,860  $ 4,301
+ The accompanying notes are an integral part of the consolidated financial statements.
+44
+Page#3
+Dana Incorporated
+Consolidated Statement of Cash Flows
+(In millions)
+ 2016  2015  2014
+Operating activities 
+Net income $ 653  $ 180  $ 328
+Depreciation 173  158  164
+Amortization of intangibles 9  16  49
+Amortization of deferred financing charges 5  5  5
+Call premium on senior notes 12  2  15
+Write-off of deferred financing costs 5  1  4
+Earnings of affiliates, net of dividends received (3)  12  4
+Stock compensation expense 17  14  16
+Deferred income taxes (480)  (10)  (199)
+Pension expense (contributions), net (16)  (18)  30
+Loss on sale of subsidiaries 80 
+Impairment of long-lived assets  36 
+Impairment of equity affiliate  39 
+Loss on disposal group held for sale 78
+Interest payment received on payment-in-kind note receivable 40
+Change in working capital (51)  (41)  (39)
+Change in other noncurrent assets and liabilities (1)  (7)  (16)
+Other, net (19)  19  31
+Net cash provided by operating activities 384  406  510
+Investing activities 
+Purchases of property, plant and equipment (322)  (260)  (234)
+Acquisition of businesses (78) 
+Principal payment received on payment-in-kind note receivable 35
+Purchases of marketable securities (93)  (43)  (84)
+Proceeds from sales of marketable securities 47  17  7
+Proceeds from maturities of marketable securities 47  30  21
+Proceeds from sale of subsidiaries 34 9
+Other  (2) 
+Net cash used in investing activities (365)  (258)  (246)
+Financing activities 
+Net change in short-term debt 9  (5)  (8)
+Proceeds from letters of credit 12
+Repayment of letters of credit  (4)  (8)
+Proceeds from long-term debt 441  18  448
+Repayment of long-term debt (382)  (60)  (372)
+Call premium on senior notes (12)  (2)  (15)
+Deferred financing payments (11) (7)
+Dividends paid to preferred stockholders (8)
+Dividends paid to common stockholders (35)  (37)  (32)
+Distributions to noncontrolling interests (17)  (9)  (9)
+Repurchases of common stock (81)  (311)  (260)
+Other  7  5
+Net cash used in financing activities (88)  (403)  (254)
+Net increase (decrease) in cash and cash equivalents (69)  (255)  10
+Cash and cash equivalents - beginning of period 791  1,121  1,256
+Effect of exchange rate changes on cash balances (15)  (75)  (118)
+Less: cash of disposal group held for sale (27)
+Cash and cash equivalents - end of period $ 707  $ 791  $ 1,121
+The accompanying notes are an integral part of the consolidated financial statements.
+45

@@ -1,0 +1,157 @@
+
+Page#1
+Table of Contents 
+3M Company and Subsidiaries
+Consolidated Statement of Incom e
+Years ended December 31
+ 
+(Millions, except per share amounts) 2017 2016 2015 
+ 
+Net sales  $ 31,657  $ 30,109  $ 30,274 
+Operating expenses 
+Cost of sales 16,001 15,040 15,383 
+Selling, general and administrative expenses 6,572 6,222 6,229 
+Research, development and related expenses 1,850 1,735 1,763 
+Gain on sale of businesses (586)  (111)  (47) 
+Total operating expenses 23,837 22,886 23,328 
+Operating income 7,820 7,223 6,946 
+ 
+Other expense (income), net 272 170 123 
+ 
+Income before income taxes 7,548 7,053 6,823 
+Provision for income taxes 2,679 1,995 1,982 
+Net income including noncontrolling interest  $ 4,869  $ 5,058  $ 4,841 
+ 
+Less: Net income attributable to noncontrolling interest 11 8 8 
+ 
+Net income attributable to 3M  $ 4,858  $ 5,050  $ 4,833 
+ 
+Weighted average 3M common shares outstanding — basic 597.5 604.7 625.6 
+Earnings per share attributable to 3M common shareholders — basic  $ 8.13  $ 8.35  $ 7.72 
+ 
+Weighted average 3M common shares outstanding — diluted 612.7 618.7 637.2 
+Earnings per share attributable to 3M common shareholders — diluted  $ 7.93  $ 8.16  $ 7.58 
+ 
+Cash dividends paid per 3M common share  $ 4.70  $ 4.44  $ 4.10 
+ 
+The accompanying Notes to Consolidated Financial Statements are an integral part of this statement.
+ 
+57
+ 
+Page#2
+Table of Contents 
+3M Company and Subsidiaries
+Consolidated Balance Shee t
+At December 31
+ 
+ December 31, December 31,  
+(Dollars in millions, except per share amount) 2017 2016 
+Assets 
+Current assets 
+Cash and cash equivalents  $ 3,053  $ 2,398 
+Marketable securities — current 1,076 280 
+Accounts receivable — net of allowances of $103 and $88 4,911 4,392 
+Inventories 
+Finished goods 1,915 1,629 
+Work in process 1,218 1,039 
+Raw materials and supplies 901 717 
+Total inventories 4,034 3,385 
+Prepaids 937 821 
+Other current assets 266 450 
+Total current assets 14,277 11,726 
+Property, plant and equipment 24,914 23,499 
+Less: Accumulated depreciation (16,048)  (14,983) 
+Property, plant and equipment — net 8,866 8,516 
+Goodwill 10,513 9,166 
+Intangible assets — net 2,936 2,320 
+Other assets 1,395 1,178 
+Total assets  $ 37,987  $ 32,906 
+Liabilities 
+Current liabilities 
+Short-term borrowings and current portion of long-term debt  $ 1,853  $ 972 
+Accounts payable 1,945 1,798 
+Accrued payroll 870 678 
+Accrued income taxes 310 299 
+Other current liabilities 2,709 2,472 
+Total current liabilities 7,687 6,219 
+ 
+Long-term debt 12,096 10,678 
+Pension and postretirement benefits 3,620 4,018 
+Other liabilities 2,962 1,648 
+Total liabilities  $ 26,365  $ 22,563 
+Commitments and contingencies (Note 15) 
+Equity 
+3M Company shareholders’ equity: 
+Common stock par value, $.01 par value  $ 9  $ 9 
+Shares outstanding - 2017: 594,884,237 
+Shares outstanding - 2016: 596,726,278 
+Additional paid-in capital 5,352 5,061 
+Retained earnings 39,115 37,907 
+Treasury stock (25,887)  (25,434) 
+Accumulated other comprehensive income (loss) (7,026)  (7,245) 
+Total 3M Company shareholders’ equity 11,563 10,298 
+Noncontrolling interest 59 45 
+Total equity  $ 11,622  $ 10,343 
+Total liabilities and equity  $ 37,987  $ 32,906 
+ 
+The accompanying Notes to Consolidated Financial Statements are an integral part of this statement.
+59
+ 
+Page#3
+Table of Contents 
+3M Company and Subsidiaries
+Consolidated Statement of Cash Flow s
+Years ended December 31
+ 
+(Millions) 2017 2016 2015 
+ 
+Cash Flows from Operating Activities 
+Net income including noncontrolling interest  $ 4,869  $ 5,058  $ 4,841 
+Adjustments to reconcile net income including noncontrolling interest
+to net cash provided by operating activities 
+Depreciation and amortization 1,544 1,474 1,435 
+Company pension and postretirement contributions (967)  (383)  (267) 
+Company pension and postretirement expense 333 251 556 
+Stock-based compensation expense 324 298 276 
+Gain on sale of businesses (586)  (111)  (47) 
+Deferred income taxes 107 7 395 
+Excess tax benefits from stock-based compensation — — (154) 
+Changes in assets and liabilities 
+Accounts receivable (245)  (313)  (58) 
+Inventories (387)  57 3 
+Accounts payable 24 148 9 
+Accrued income taxes (current and long-term) 967 101 (744) 
+Other — net 257 75 175 
+Net cash provided by operating activities 6,240 6,662 6,420 
+ 
+Cash Flows from Investing Activities 
+Purchases of property, plant and equipment (PP&E) (1,373)  (1,420)  (1,461) 
+Proceeds from sale of PP&E and other assets 49 58 33 
+Acquisitions, net of cash acquired (2,023)  (16)  (2,914) 
+Purchases of marketable securities and investments (2,152)  (1,410)  (652) 
+Proceeds from maturities and sale of marketable securities and investments 1,354 1,247 1,952 
+Proceeds from sale of businesses, net of cash sold 1,065 142 123 
+Other — net (6)  (4)  102 
+Net cash used in investing activities (3,086)  (1,403)  (2,817) 
+ 
+Cash Flows from Financing Activities 
+Change in short-term debt — net 578 (797)  860 
+Repayment of debt (maturities greater than 90 days) (962)  (992)  (800) 
+Proceeds from debt (maturities greater than 90 days) 1,987 2,832 3,422 
+Purchases of treasury stock (2,068)  (3,753)  (5,238) 
+Proceeds from issuance of treasury stock pursuant to stock option and
+benefit plans 734 804 635 
+Dividends paid to shareholders (2,803)  (2,678)  (2,561) 
+Excess tax benefits from stock-based compensation — — 154 
+Other — net (121)  (42)  (120) 
+Net cash used in financing activities (2,655)  (4,626)  (3,648) 
+ 
+Effect of exchange rate changes on cash and cash equivalents 156 (33)  (54) 
+ 
+Net increase (decrease) in cash and cash equivalents 655 600 (99) 
+Cash and cash equivalents at beginning of year 2,398 1,798 1,897 
+Cash and cash equivalents at end of period  $ 3,053  $ 2,398  $ 1,798 
+ 
+The accompanying Notes to Consolidated Financial Statements are an integral part of this statement.
+61
+ 

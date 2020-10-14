@@ -1,0 +1,38 @@
+td{
+color:black;
+}
+.right{
+	        text-align:right;
+	}
+
+.tables th {
+	border-top: .0625rem solid #e3e3e3;
+	    vertical-align: top;
+	        border-top: 1px solid #dee2e6;
+		padding-top:0.5rem;
+		padding-bottom:0.5rem;
+	}
+	tr{
+		border-top: .0625rem solid #e3e3e3;
+	}
+	 td {
+		     padding: .5rem !important;
+		         vertical-align: top;
+			    border-top: .0625rem solid #e3e3e3;
+		    }
+		    .tables{
+			        width: 100%;
+				    margin-bottom: 1rem;
+				    color: #212529;
+				    border-collapse: collapse;
+				        background-color: transparent;
+				}
+				tr{
+					padding-top:0px;
+					padding-bottom:0px
+				}
+
+
+#companynamedisplay{
+          font-size:16px;
+}

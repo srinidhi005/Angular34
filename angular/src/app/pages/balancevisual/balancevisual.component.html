@@ -1,0 +1,371 @@
+<style>
+    #modalPopUpId{
+    
+    padding-right:10px;
+        width: 204px !important;background:none;box-shadow:none;color:black;background-color: Transparent;
+                background-repeat:no-repeat;
+                        border: none;
+                            cursor:pointer;
+                                    overflow: hidden;
+                                        outline:none;
+        
+    }
+    #metricsbtn{
+    background-color: Transparent;
+            background-repeat:no-repeat;
+                padding-top:10px;
+                    color:black;
+                 padding-right:3px;
+                    border: none;
+                        cursor:pointer;
+                                overflow: hidden;
+                                    outline:none;
+    }  
+    #dashBoardId{
+    background-color: Transparent;
+        padding-top:10px;
+            color:black;
+            background-repeat:no-repeat;
+                padding-right:10px;
+                    border: none;
+                        cursor:pointer;
+                                overflow: hidden;
+                                    outline:none;
+    }
+    #saveScenario{
+    background-color: Transparent;
+        color:black;
+            padding-top:10px;
+                padding-right:10px;
+            background-repeat:no-repeat;
+                    border: none;
+                        cursor:pointer;
+                                overflow: hidden;
+                                    outline:none;
+    }
+    
+    #sel2,#sel4{
+    
+        margin-top:9px;
+            margin-right:30px;
+    
+    
+                background-color: Transparent;
+                        background-repeat: no-repeat;
+                                border: none;
+                                    cursor: pointer;
+                                         
+                                                overflow: hidden;
+                                                        outline: none;
+                                                            color: black;
+    }
+    
+    select:focus {
+        outline: none;
+    }
+    
+    .alert{
+          display: none;
+      }
+      .myAlert-top{
+    
+      top: 2px; 
+     
+      width: 100%;
+    }
+    .myAlert-topss{
+    
+    top: 2px;
+    
+    width: 100%;
+    }
+    .myAlert-tops{
+    
+    top: 2px; 
+    
+    width: 100%;
+    }   
+    .cover-spin {
+                position:fixed;
+                    width:100%;
+                            left:0;right:0;top:0;bottom:0;
+                                background-color: rgba(255,255,255,0.7);
+                                        z-index:9999;
+                                            display:none;
+        }
+        
+        
+        
+        
+    
+        @-webkit-keyframes spin {
+                from {-webkit-transform:rotate(0deg);}
+                to {-webkit-transform:rotate(360deg);}
+        }
+    
+        @keyframes spin {
+                from {transform:rotate(0deg);}
+                to {transform:rotate(360deg);}
+        }
+    
+        .cover-spin::after {
+                content:'';
+                    display:block;
+                            position:absolute;
+                                left:48%;top:40%;
+                                        width:40px;height:40px;
+                                            border-style:solid;
+                                                    border-color:black;
+                                                        border-top-color:transparent;
+                                                                border-width: 4px;
+                                                                    border-radius:50%;
+                                                                            -webkit-animation: spin .8s linear infinite;
+                                                                                animation: spin .8s linear infinite;
+        }
+    #deletebtn{
+    background-color: Transparent;
+            padding-top:10px;
+                    color:black;
+                background-repeat:no-repeat;
+                        padding-left:20px;
+                            border: none;
+                                        cursor:pointer;
+                                                    overflow: hidden;
+                                                                outline:none;
+    }
+    </style>
+    <div class="content">
+        <div class="cover-spin"></div>
+       <div class="btn-group float-right" role="group" >
+            
+    
+    <select type="button"  
+                        id="sel2" >
+                          </select>
+    
+    
+    
+    
+    
+    
+    <!--	  <a href="" id="dashBoardId" class="float-right rmiBtn">
+                <i class="fas fa-desktop" style="
+                        padding-right: 5px;
+                    "></i>
+             Dashboard
+    </a>-->
+            <a href=""  id="addNewScenario" type="button" onclick="myAlertTop()" class="float-right rmiBtn" data-toggle="modal" data-target="#myModal" style="
+                   padding-right: 10px;
+               padding-top: 10px;
+                   color: black;
+           "	   >
+            <i class="far fa-plus-square" style="
+                padding-right:5px
+                    "></i>
+                  Add Scenario </a>
+            <a href="" id="saveScenario"  type="button"   onclick="myAlertTops()"  class="float-right rmiBtn" data-toggle="modal" data-target="#myModal" style="
+                padding-right:10px;">
+            <i class="far fa-save" style="padding-right: 5px;"></i>Save Scenario </a>
+        
+           
+    
+    
+        <select type="button" id="sel4">
+            <option selected disabled value="" style="font-style:italic">Metrics</option>
+            <option value="pl" >Income Statement</option>
+            <option value="bs">Balance Sheet</option>
+        </select>
+    
+    
+    
+    
+    
+    
+    <!--	<a href="" id="metricsbtn" class="float-right">
+             <i class="fas fa-list-ol" style="padding-right:5px;" aria-hidden="true"></i>
+                                    Metrics
+    
+    </a>-->
+                                    
+    
+      <a  id="deletebtn" class="float-right rmiBtn" data-toggle="modal" data-target="#popUpModal">
+                     <i class="fa fa-trash" style="padding-right:5px;" aria-hidden="true"></i>
+                                                   Delete    </a>
+        </div>
+    
+     
+    <div class="myAlert-top alert alert-success">
+       
+        Adding new scenario
+      </div>
+    <div class="myAlert-tops alert alert-success">
+             Saving the scenario
+        </div>
+    <div class="myAlert-topss alert alert-success">
+             File deleted Successfully, refresh the page
+            </div>
+      <h4 class="pl-2" style="padding-top:6px">Balance Sheet Model Drivers</h4>
+      
+        <div class=" row" >
+         
+          <div class=" col-lg-4">
+            <div class=" card card-chart">
+              <!-- <div class=" card-header">
+                <h4 class=" card-title">Revenue Growth</h4>  
+              </div> -->
+              <div class=" card-body">
+                   <div class=" chart-area" #DSO> </div> 
+                 
+              </div>
+            </div>
+          </div>
+          <div class=" col-lg-4">
+              <div class=" card card-chart">
+                <!-- <div class=" card-header">
+                  <h4 class=" card-title">COGS</h4>  
+                </div> -->
+                <div class=" card-body ">
+                    <div class=" chart-area" #ID></div> 
+                   
+                </div>
+              </div>
+            </div>
+          <div class=" col-lg-4">
+                <div class=" card card-chart">
+                  <!-- <div class=" card-header">
+                    <h4 class=" card-title">SG&A</h4>  
+                  </div> -->
+                  <div class=" card-body">
+                      <div class=" chart-area" #OCA></div>  
+                      
+                  </div>
+                </div>
+              </div>
+              <div class=" col-lg-4">
+                  <div class=" card card-chart">
+                    <!-- <div class=" card-header">
+                      <h4 class=" card-title">D&A</h4>  
+                    </div> -->
+                    <div class=" card-body" >
+                     <div class=" chart-area" #DPO></div>  
+                    </div>
+                  </div>
+                </div>
+                 <div class=" col-lg-4">
+                    <div class=" card card-chart">
+                      <!-- <div class=" card-header">
+                        <h4 class=" card-title">Other Income/Expense</h4>  
+                      </div> -->
+                      <div class=" card-body">
+                          <div class=" chart-area" #AL></div>  
+                          
+                      </div>
+                    </div>
+                  </div>
+                <div class=" col-lg-4">
+                      <div class=" card card-chart">
+                        <!-- <div class=" card-header">
+                          <h4 class=" card-title">Net Interest Expense</h4>  
+                        </div> -->
+                        <div class=" card-body" >
+                           <div class=" chart-area" #OCL></div> 
+                            
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <h4 class="pl-2">Annual Projections</h4>
+                    <div class=" row">
+    
+                    
+    
+                       <div class=" col-lg-4">
+                        <div class=" card card-chart">
+                          <!-- <div class=" card-header">
+                            <h4 class=" card-title">Revenue Growth</h4>  
+                          </div> -->
+                          <div class=" card-body">
+                             <div class=" chart-area" #TCA> </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class=" col-lg-4">
+                          <div class=" card card-chart">
+                            <!-- <div class=" card-header">
+                              <h4 class=" card-title">COGS</h4>  
+                            </div> -->
+                            <div class=" card-body">
+                                 <div class=" chart-area" #TA> </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class=" col-lg-4">
+                            <div class=" card card-chart">
+                              <!-- <div class=" card-header">
+                                <h4 class=" card-title">SG&A</h4>  
+                              </div> -->
+                              <div class=" card-body">
+                                  <div class=" chart-area" #TCL> </div> 
+                              </div>
+                            </div>
+                          </div>
+                          <div class=" col-lg-4">
+                              <div class=" card card-chart">
+                                <!-- <div class=" card-header">
+                                  <h4 class=" card-title">D&A</h4>  
+                                </div> -->
+                                <div class=" card-body" >
+                                   <div class=" chart-area" #TL> </div> 
+                                </div>
+                              </div>
+                            </div>
+                            <div class=" col-lg-4">
+                                <div class=" card card-chart">
+                                  <!-- <div class=" card-header">
+                                    <h4 class=" card-title">Other Income/Expense</h4>  
+                                  </div> -->
+                                  <div class=" card-body">
+                                    <div class=" chart-area" #TSE> </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class=" col-lg-4">
+                                  <div class=" card card-chart">
+                                    <!-- <div class=" card-header">
+                                      <h4 class=" card-title">Net Interest Expense</h4>  
+                                    </div> -->
+                                    <div class=" card-body" >
+                                        <div class=" chart-area" #TLSE> </div>  
+                                    </div>
+                                  </div>
+                                </div>
+    
+      
+        </div>
+      
+      </div>
+      
+       <div class="modal fade" id="popUpModal" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+            <div class="modal-header" style="background-color: #164A5B; padding:15px 15px 0 150px;">
+            <h4 class="modal-title pb-3 pt-0" style="color:white;"><i class="fas fa-file-upload"></i>Confirmation</h4>
+                                          
+            <button type="button" style="padding-top:5px" class="close" data-dismiss="modal">&times;</button>
+                                                                            </div>
+                        <div class="modal-body">
+                            <div class="thank-you-pop">
+                                <p id="popUpMsg"></p>
+                            </div>
+                             
+                        </div>
+                        <div class="modal-footer"  >
+                    <a id="popUpBtn" class="btn btn-success" onclick="goToStatement()">ok</a>
+                             <button type="button" class="btn btn-success" data-dismiss="modal" style="    width: 200px;color:black"> Cancel</button>
+                          
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+    

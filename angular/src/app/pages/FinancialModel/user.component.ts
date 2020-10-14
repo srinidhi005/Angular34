@@ -1,3 +1,4 @@
+
 import * as $ from 'jquery';
 import "../../../assets/js/High.js";
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
@@ -38,9 +39,11 @@ import * as draggablePoints from 'highcharts-draggable-points/draggable-points.j
 	$(".cover-spin").show();
         draggablePoints(Highcharts1);
 	var yearsArray = [];
+	var yearsArrayForAssum = [];
 	var nextScenarioNo;
         var companyName; 
-        var scenarioNumber;
+	var scenarioNumber;
+	var actualName;
         var scenarioCount;
         var assumptionArray = [];
         var actualObj;
@@ -48,15 +51,22 @@ import * as draggablePoints from 'highcharts-draggable-points/draggable-points.j
 var inputArray= [];
         function fun1(){
              yearsArray = [];
+			 yearsArrayForAssum = [];
              inputArray= [];
 try {
-	var queryString = window.location.href.split("?")[1];
-	 companyName = (queryString.split("&")[0]).split("=")[1];
+var queryString = window.location.href.split("?")[1];
+	console.log("initiateed: ",queryString);
+	companyName = (queryString.split("&")[0]).split("=")[1];
+	//actualName = (queryString.split("&")[2]).split("=")[1];
+	//let comname = companyName.includes("##")?companyName.slice(0,companyName.length-2):companyName;
+	localStorage.setItem("companyName",companyName);
+	//localStorage.setItem("actualName",actualName);
 	 scenarioNumber = (queryString.split("&")[1]).split("=")[1];
-	 $("#sel2").val(scenarioNumber);
+	 //	 $("#sel2").val(scenarioNumber);
 	 if(companyName.endsWith("##")){
 	 window.location.href=(((decodeURI(window.location.href)).split("=")[0])+"="+(companyName.substring(0,companyName.length-2))+"&scenario="+scenarioNumber);
 
+			localStorage.setItem("actualName", "NA");
 			window.location.reload();
 			  }else{
 			  $(".cover-spin").hide();
@@ -73,6 +83,7 @@ $("#dashBoardId").attr("href","#/dashboard?companyName="+companyName);
 $("#actualsId").attr("href","/actual?CompanyName="+companyName);
 $("#financialId").attr("href","/FinancialModel?CompanyName="+companyName);
 $("#metricsbtn").attr("href","#/pdf?CompanyName="+companyName+"##");
+$("#visual").attr("href","/balancevisual?companName="+companyName);
 
  assumptionArray = [];
 let actualsInput = {
@@ -112,7 +123,8 @@ let actualsInput = {
 					"revenuepercent" : resObject[j].revenuepercent,
 					"sgapercent" : resObject[j].sgapercent,
 					"cogspercent" : resObject[j].cogspercent,
-					"dapercent" : resObject[j].dapercent
+					"dapercent" : resObject[j].dapercent,
+					"netIterestExpense" : resObject[j].netinterest
 					}
 				);
 			yearsArray.push(resObject[j].asof);
@@ -138,11 +150,11 @@ let actualsInput = {
         },
     
         xAxis: {
-             categories: yearsArray
+             categories: yearsArrayForAssum
         },
             yAxis: {
-                min : -100,
-                max : 100,
+                min : -50,
+                max : 50,
                 title : {
                     text:'In Percentage %'
                 }
@@ -167,16 +179,14 @@ let actualsInput = {
             },
             column: {
                 stacking: 'normal',
-                color:'grey'
+                colorByPoint:true
             },
             line: {
                 cursor: 'ns-resize'
             }
         },
-        colors: [	
-            'grey',
-                   'skyblue'
-         ],
+        colors: [
+            'skyblue','skyblue','grey','grey','grey','grey'],
         tooltip: {
           //headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
           //pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.2f}%</b> of total<br/>'
@@ -214,7 +224,7 @@ let actualsInput = {
         },
     
         xAxis: {
-             categories: yearsArray
+             categories: yearsArrayForAssum
         },
         yAxis: {
 			min : 0,
@@ -243,16 +253,14 @@ let actualsInput = {
             },
             column: {
                 stacking: 'normal',
-                color:'grey'
+                colorByPoint:true
             },
             line: {
                 cursor: 'ns-resize'
             }
         },
-        colors: [	
-            'grey',
-                   'skyblue'
-         ],
+        colors: [
+            'skyblue','skyblue','grey','grey','grey','grey'],
         tooltip: {
           //headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
           //pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.2f}%</b> of total<br/>'
@@ -292,7 +300,7 @@ let actualsInput = {
         },
     
         xAxis: {
-             categories: yearsArray
+             categories: yearsArrayForAssum
         },
         yAxis: {
 			crosshair:true,
@@ -321,15 +329,14 @@ let actualsInput = {
             },
             column: {
                 stacking: 'normal',
-                color:'grey'
+                colorByPoint:true
             },
             line: {
                 cursor: 'ns-resize'
             }
         },
         colors: [	
-            'grey',
-                   'skyblue'
+            'skyblue','skyblue','grey','grey','grey','grey'
          ],
         tooltip: {
           //headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
@@ -370,10 +377,11 @@ let actualsInput = {
         },
     
         xAxis: {
-             categories: yearsArray
+             categories: yearsArrayForAssum
         },
         yAxis: {
-			min : 0,
+	min : -50,
+	max :50,
 			
 			title : {
 				text:'As % of Revenue'
@@ -399,15 +407,15 @@ let actualsInput = {
             },
             column: {
                 stacking: 'normal',
-                color:'grey'
+                colorByPoint:true
             },
             line: {
                 cursor: 'ns-resize'
             }
         },
         colors: [	
-            'grey',
-                   'skyblue'
+            
+                   'skyblue','skyblue','grey','grey','grey','grey'
          ],
         tooltip: {
           //headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
@@ -448,11 +456,11 @@ let actualsInput = {
         },
     
         xAxis: {
-             categories: yearsArray
+             categories: yearsArrayForAssum
         },
         yAxis: {
-			min : -100,
-			max : 100,
+			min : -20,
+			max : 20,
 			title : {
 				text:'As % of Revenue'
 			}
@@ -477,15 +485,15 @@ let actualsInput = {
             },
             column: {
                 stacking: 'normal',
-                color:'grey'
+                colorByPoint:true
             },
             line: {
                 cursor: 'ns-resize'
             }
         },
         colors: [	
-            'grey',
-                   'skyblue'
+           
+                   'skyblue','skyblue', 'grey', 'grey', 'grey', 'grey'
          ],
         tooltip: {
           //headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
@@ -526,7 +534,7 @@ let actualsInput = {
         },
     
         xAxis: {
-             categories: yearsArray
+             categories: yearsArrayForAssum
         },
         yAxis: {
 		  crosshair: true,
@@ -555,15 +563,15 @@ let actualsInput = {
             },
             column: {
                 stacking: 'normal',
-                color:'grey'
+                colorByPoint:true
             },
             line: {
                 cursor: 'ns-resize'
             }
         },
         colors: [	
-            'grey',
-                   'skyblue'
+            
+                   'skyblue','skyblue','grey','grey','grey','grey'
          ],
         tooltip: {
           //headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
@@ -1038,10 +1046,36 @@ let actualsInput = {
             }
         }
     });
+   
+      
+      $("#deletebtn").click(function(){
+$("#popUpMsg").text("are you sure you want to delete "+companyName+" statement");
+});
 
-      
-      
-      
+$("#popUpBtn").click(function(){   
+$(".cover-spin").show();
+ let deleteInput = {
+        "async": true,
+        "crossDomain": true,
+        "url": "http://34.67.197.111:8000/deletestatement?companyname="+companyName,
+        "method": "GET",
+        "headers": {
+            "authorization": "Basic cm1pX3VzZXI6cm1pMzIxIUAj",
+            "content-type": "application/json",
+            "cache-control": "no-cache",
+            "postman-token": "648dcbfa-30ef-3359-f29a-31b2038f29ac"
+        },
+        "processData": false,
+    }
+ $.ajax(deleteInput).done(function (response){
+window.location.href = "/#/statement";
+});
+});
+
+function goToStatement(){
+                        window.location.href = "/#/statement";
+                }      
+
 function loadData(){
     let scenarioInput = {
         "async": true,
@@ -1087,8 +1121,10 @@ function loadData(){
             console.log("3:typeof presentScenarios[index] ",typeof presentScenarios[index] );
             if(typeof presentScenarios[index] != 'undefined'){
                 scenarioCount = index + 1;
-                $("#scenario"+presentScenarios[index]).show();
+		$("#scenario"+presentScenarios[index]).show();
+		$("#scenarioi"+presentScenarios[index]).show();
 		$("#scenarioa"+presentScenarios[index]).attr("href","#/FinancialModel?companyName="+companyName+"&senario="+presentScenarios[index]);
+		$("#scenariob"+presentScenarios[index]).attr("href","#/balancevisual?companyName="+companyName+"&senario="+presentScenarios[index]);
 
             }else if(index == 1){
                 // scenarioCount = index;
@@ -1097,7 +1133,7 @@ function loadData(){
             }
         }
         console.log("4:scenarioCount",scenarioCount);
-        if(scenarioCount <= 4 && scenarioCount > 0){
+        if(scenarioCount <= 8 && scenarioCount > 0){
             //  scenarioNumber = parseInt(scenarioCount);
             console.log("scenarioCount",scenarioCount);
 	    $("#addNewScenario").show();
@@ -1106,7 +1142,7 @@ function loadData(){
         }else{
             $("#addNewScenario").hide();
         }
-        if(parseInt(scenarioNumber) <= 4 && parseInt(scenarioNumber) >= 0){
+        if(parseInt(scenarioNumber) <= 8 && parseInt(scenarioNumber) >= 0){
         	$("#saveScenario").show();
         }
         $('#cover-spin').show();
@@ -1147,7 +1183,7 @@ function loadData(){
                             
                     });
                     yearsArray.push(resObject[j].asof);
-                    assumptionArray.push(resObject[j].asof)
+                    assumptionArray.push(resObject[j].asof);
                     //revenueGrowthArray.push(resObject[j].revenuepercent);
                     //COGSArray.push(resObject[j].cogspercent);
                     //SGAndAArray.push(resObject[j].sgapercent);
@@ -1155,8 +1191,10 @@ function loadData(){
                     //otherIncomeOrExpenseArray.push(resObject[j].otherincomepercent);
                     //netinterestdollarsArray.push(resObject[j].netinterestdollars);
                 }
+				for(let i=1;i<yearsArray.length;i++){
 				
-				for(let i=0;i<yearsArray.length;i++){
+					yearsArrayForAssum.push(yearsArray[i]);
+				
 				    revenueGrowthArray.push((actualObj.get(yearsArray[i]).revenuepercent == undefined)?0: actualObj.get(yearsArray[i]).revenuepercent );
 					
 					COGSArray.push((actualObj.get(yearsArray[i]).cogspercent == undefined)?0: actualObj.get(yearsArray[i]).cogspercent );
@@ -1273,30 +1311,49 @@ function loadData(){
 
     $("#scenario1").click(function(){
 	$(".cover-spin").show();
-    window.location.href='http://34.67.197.111/#/FinancialModel?companyName='+companyName+'&senario=1';
+    window.location.href='/#/FinancialModel?companyName='+companyName+'&senario=1';
 	            location.reload();
 		    });
 		    $("#scenario2").click(function(){ 
 			$(".cover-spin").show();
-		    window.location.href='http://34.67.197.111/#/FinancialModel?companyName='+companyName+'&senario=2';	    
+		    window.location.href='/#/FinancialModel?companyName='+companyName+'&senario=2';	    
 		                location.reload();
 				});
 				$("#scenario3").click(function(){
 				$(".cover-spin").show();
-				window.location.href='http://34.67.197.111/#/FinancialModel?companyName='+companyName+'&senario=3';	    
+				window.location.href='/#/FinancialModel?companyName='+companyName+'&senario=3';	    
 				            location.reload();
 					            });
 						    $("#scenario4").click(function(){
 							$(".cover-spin").show();
-						    window.location.href='http://34.67.197.111/#/FinancialModel?companyName='+companyName+'&senario=4';	    
+						    window.location.href='/#/FinancialModel?companyName='+companyName+'&senario=4';	    
 						                location.reload();
 								        });
-
+                                                    $("#scenario5").click(function(){
+                                                        $(".cover-spin").show();
+                                                    window.location.href='/#/FinancialModel?companyName='+companyName+'&senario=5';
+                                                                location.reload();
+                                                                        });
+                                                    $("#scenario6").click(function(){
+                                                        $(".cover-spin").show();
+                                                    window.location.href='/#/FinancialModel?companyName='+companyName+'&senario=6';
+                                                                location.reload();
+                                                                        });
+                                                    $("#scenario7").click(function(){
+                                                        $(".cover-spin").show();
+                                                    window.location.href='/#/FinancialModel?companyName='+companyName+'&senario=7';
+                                                                location.reload();
+                                                                        });
+                                                    $("#scenario8").click(function(){
+                                                        $(".cover-spin").show();
+                                                    window.location.href='/#/FinancialModel?companyName='+companyName+'&senario=8';
+                                                                location.reload();
+                                                                        });
 
 
 									$("#addNewScenario").click(function(){
 									$(".cover-spin").show();
-									window.location.href='http://34.67.197.111/#/FinancialModel?companyName='+companyName+'&senario='+nextScenarioNo;
+									window.location.href='/#/FinancialModel?companyName='+companyName+'&senario='+nextScenarioNo;
 									location.reload();
 									});
 
@@ -1397,20 +1454,39 @@ function loadData(){
 		  str=str+"<option _ngcontent-sut-c5='' value='"+presentScenarios[i]+"' ng-reflect-value='"+presentScenarios[i]+"'>		 Scenario "+presentScenarios[i]+" </option>";
 													              }
 														                   		 $("#sel2").html(str);
-				$("#sel2").val(scenarioNumber);														 });
-																		 console.log("secnario no 0805",scenarioNumber);
-				
-																	                $( "#sel2" ).change(function() {
+	if(presentScenarios.includes(Number(scenarioNumber))){
+																						$("#sel2").val(scenarioNumber);
+																																										 }else{
+																																										 																					$("#sel2").val(0);
+																																																																																			 }
+																																																																																			 																				 if(Number(scenarioNumber) == 0){
+																																																																																																							 																					$("#saveScenario").hide();
+																																																																																																																																																 }
+																																																																																																																																																 																                  });
+
+																		                $( "#sel2" ).change(function() {
 																				                
 																				                let scerno=$("#sel2").val();
 		 window.location.href="/#/FinancialModel?companyname="+companyName+"&scenario="+scerno;
-		 window.location.reload();
-		 
+							         window.location.reload();
 																											            });
+
+																												    $("#sel4").change(function(){
+																												    let pl=$("#sel4").val();
+																												    if(pl=="pl"){
+																												    window.location.href="#/pdf?CompanyName="+companyName+"##";
+																												    window.location.reload();
+																												    }else if(pl=="bs"){
+																												    window.location.href="/#/rmi?companyName="+companyName+"##";
+		window.location.reload();																										    }
+																									
+																												    });
+																									
+
 
 
     }
-   
+  
 
  }
    
